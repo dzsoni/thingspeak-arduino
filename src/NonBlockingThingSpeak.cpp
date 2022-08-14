@@ -9,5 +9,5 @@
   See the accompaning licence file for licensing information.
 */
 
-#include "ThingSpeak.h"
-ThingSpeakClass ThingSpeak;
+#include "NonBlockingThingSpeak.h"
+NonBlockingThingSpeakClass ThingSpeak;
