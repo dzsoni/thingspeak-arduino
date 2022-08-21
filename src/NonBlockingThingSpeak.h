@@ -20,7 +20,7 @@
 #ifndef ThingSpeak_h
 #define ThingSpeak_h
 
-#define TS_VER "2.0.0"
+#define TS_VER "1.0.0"
 
 #include "Arduino.h"
 #include <Client.h>
@@ -31,28 +31,28 @@
 
 #ifdef ARDUINO_ARCH_AVR
 #ifdef ARDUINO_AVR_YUN
-#define TS_USER_AGENT "tslib-arduino/" TS_VER " (arduino yun)"
+#define TS_USER_AGENT "tsnblib-arduino/" TS_VER " (arduino yun)"
 #else
-#define TS_USER_AGENT "tslib-arduino/" TS_VER " (arduino uno or mega)"
+#define TS_USER_AGENT "tsnblib-arduino/" TS_VER " (arduino uno or mega)"
 #endif
 #elif defined(ARDUINO_ARCH_ESP8266)
-#define TS_USER_AGENT "tslib-arduino/" TS_VER " (ESP8266)"
+#define TS_USER_AGENT "tsnblib-arduino/" TS_VER " (ESP8266)"
 #elif defined(ARDUINO_SAMD_MKR1000)
-#define TS_USER_AGENT "tslib-arduino/" TS_VER " (arduino mkr1000)"
+#define TS_USER_AGENT "tsnblib-arduino/" TS_VER " (arduino mkr1000)"
 #elif defined(ARDUINO_SAM_DUE)
-#define TS_USER_AGENT "tslib-arduino/" TS_VER " (arduino due)"
+#define TS_USER_AGENT "tsnblib-arduino/" TS_VER " (arduino due)"
 #elif defined(ARDUINO_ARCH_SAMD)
-#define TS_USER_AGENT "tslib-arduino/" TS_VER " (arduino samd)"
+#define TS_USER_AGENT "tsnblib-arduino/" TS_VER " (arduino samd)"
 #elif defined(ARDUINO_ARCH_SAM)
-#define TS_USER_AGENT "tslib-arduino/" TS_VER " (arduino sam)"
+#define TS_USER_AGENT "tsnblib-arduino/" TS_VER " (arduino sam)"
 #elif defined(ARDUINO_ARCH_SAMD_BETA)
-#define TS_USER_AGENT "tslib-arduino/" TS_VER " (arduino samd_beta )"
+#define TS_USER_AGENT "tsnblib-arduino/" TS_VER " (arduino samd_beta )"
 #elif defined(ARDUINO_ARCH_ESP32)
-#define TS_USER_AGENT "tslib-arduino/" TS_VER " (ESP32)"
+#define TS_USER_AGENT "tsnbib-arduino/" TS_VER " (ESP32)"
 #elif defined(ARDUINO_ARCH_SAMD_BETA)
-#define TS_USER_AGENT "tslib-arduino/" TS_VER " (arduino vidor)"
+#define TS_USER_AGENT "tsnblib-arduino/" TS_VER " (arduino vidor)"
 #else
-#define TS_USER_AGENT "tslib-arduino/" TS_VER " (unknown)"
+#define TS_USER_AGENT "tsnblib-arduino/" TS_VER " (unknown)"
 #endif
 
 #define FIELDNUM_MIN 1
@@ -1658,7 +1658,7 @@ public:
     }
     void onWriteFieldsCallback(int response)
     {
-    
+         Serial.println("Thingspeak server respnse:"+ String(response));
     }
     void onWriteFieldCallback(int response)
     {
